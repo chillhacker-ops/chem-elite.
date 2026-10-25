@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chem Elite: WAEC, NECO and SAT chemistry</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Instrument+Sans:wght@400;600&display=swap">
+<style>
+:root{--bg:#eef4f1;--ink:#12302b;--mut:#4d6a63;--card:#fffffff2;--line:#c5d6cf;--pink:#d6336c;--blue:#2b59c3;--ok:#1f8a5b;--no:#c0392b;--glass:#12302b;color-scheme:light dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e211d;--ink:#e4f0ec;--mut:#9bb8af;--card:#15302af2;--line:#2a4a42;--glass:#9bd3c2;--blue:#7ea3ff;--pink:#ff6b9d}}
+:root[data-theme="dark"]{--bg:#0e211d;--ink:#e4f0ec;--mut:#9bb8af;--card:#15302af2;--line:#2a4a42;--glass:#9bd3c2;--blue:#7ea3ff;--pink:#ff6b9d}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Instrument Sans",system-ui,sans-serif}
+#bg{position:fixed;inset:0;opacity:.14;pointer-events:none;z-index:0}
+main,header{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:12px 16px}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:.2em 0 .4em}
+h1{font-size:clamp(2rem,8vw,3.2rem);font-weight:800}
+h2{font-size:1.6rem}
+header{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px}
+.brand{font:800 1.2rem "Bricolage Grotesque",sans-serif;margin-right:auto}
+nav a{color:var(--mut);text-decoration:none;padding:4px 2px;margin-left:10px;font-weight:600;border-bottom:2px solid transparent}
+nav a.on{color:var(--ink);border-color:var(--pink)}
+a:focus-visible,button:focus-visible,input:focus-visible,input[type=range]:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:12px 0}
+.btn{font:600 1rem "Instrument Sans",sans-serif;background:var(--pink);color:#fff;border:0;border-radius:10px;padding:12px 18px;cursor:pointer;margin:4px 8px 4px 0}
+.btn.alt{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.opt{display:block;width:100%;text-align:left;font:inherit;color:var(--ink);background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:12px;margin:8px 0;cursor:pointer}
+.opt.ok{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 18%,var(--card))}
+.opt.no{border-color:var(--no);background:color-mix(in srgb,var(--no) 18%,var(--card))}
+.mut{color:var(--mut)}
+.tag{font-size:.8rem;background:var(--ink);color:var(--bg);border-radius:6px;padding:2px 8px;margin-left:6px}
+.hero{display:grid;grid-template-columns:1fr 150px;gap:16px;align-items:center}
+@media(max-width:520px){.hero{grid-template-columns:1fr}}
+input[type=text],input[type=email]{width:100%;font:inherit;padding:12px;border-radius:10px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);margin:6px 0 12px}
+input[type=range]{width:100%;accent-color:var(--pink)}
+.bar{height:10px;border-radius:5px;background:var(--line);overflow:hidden}.bar i{display:block;height:100%;background:var(--pink)}
+.price{font:800 2.2rem "Bricolage Grotesque",sans-serif}
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:520px){.plans{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<!-- Lab glassware backdrop: beaker, flask, test tube, Bunsen burner, microscope, molecule -->
+<svg id="bg" width="100%" height="100%" aria-hidden="true"><defs><pattern id="p" width="280" height="260" patternUnits="userSpaceOnUse"><g fill="none" stroke="var(--glass)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 24v52a6 6 0 0 0 6 6h24a6 6 0 0 0 6-6V24M18 24h44M22 52h36"/><path d="M124 20h12M124 20v30l-24 44a6 6 0 0 0 5 9h50a6 6 0 0 0 5-9l-24-44V20M108 82h44"/><path d="M200 20v70a10 10 0 0 0 20 0V20M196 20h28M200 60h20"/><path d="M30 215h34M38 215v-42h18v42M47 168c-7-8 0-13 0-22 7 9 7 14 0 22z"/><path d="M130 220h50M140 220v-9h30v9M155 211v-26M148 160l12-22 9 5-12 22zM172 211a24 24 0 0 0 10-34"/><circle cx="205" cy="165" r="6"/><circle cx="235" cy="182" r="6"/><circle cx="265" cy="165" r="6"/><circle cx="235" cy="215" r="6"/><path d="M210 168l20 11M240 179l20-11M235 188v21"/></g></pattern></defs><rect width="100%" height="100%" fill="url(#p)"/></svg>
+<header><span class="brand">⚗️ Chem Elite</span><nav id="nav"></nav></header>
+<main id="app"></main>
+<script>
+// ---------- Questions: [topic, question, options, correct index, worked explanation] ----------
+const Q=[
+["Atomic structure","Sodium has mass number 23 and atomic number 11. How many neutrons does it have?",["11","12","23","34"],1,"Neutrons = mass number − atomic number = 23 − 11 = 12."],
+["Atomic structure","Which sub-atomic particle has negligible mass?",["Proton","Neutron","Electron","Nucleus"],2,"An electron is about 1/1840 the mass of a proton or neutron."],
+["Periodic table","An element has electron configuration 2,8,7. Which group is it in?",["Group I","Group VII","Group VIII","Group VI"],1,"Seven outer electrons means Group VII, the halogens (this is chlorine)."],
+["Periodic table","Which of these has the largest atomic radius?",["Cl","Na","K","Li"],2,"Radius grows down a group and shrinks across a period. Potassium has the most shells of these."],
+["Bonding","What type of bond holds sodium chloride together?",["Covalent","Ionic","Metallic","Dative"],1,"Sodium gives an electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction."],
+["Bonding","What is the shape of a methane molecule, CH₄?",["Linear","Trigonal planar","Tetrahedral","Octahedral"],2,"Four bond pairs and no lone pairs repel equally, giving 109.5° angles."],
+["Acids and bases","What is the pH of 0.01 M HCl?",["1","2","7","12"],1,"HCl is a strong acid, so [H⁺] = 0.01 = 10⁻². pH = 2."],
+["Acids and bases","Which of these is a strong base?",["NH₄OH","NaOH","Al(OH)₃","Cu(OH)₂"],1,"NaOH ionises completely in water. The others are weak or insoluble."],
+["Stoichiometry","How many moles are in 36 g of water? (H = 1, O = 16)",["1","2","3","0.5"],1,"Molar mass of H₂O = 18 g/mol. 36 ÷ 18 = 2 mol."],
+["Stoichiometry","What volume do 2 mol of any gas occupy at STP? (22.4 dm³/mol)",["11.2 dm³","22.4 dm³","44.8 dm³","67.2 dm³"],2,"2 × 22.4 = 44.8 dm³."],
+["Organic chemistry","What is the general formula of the alkenes?",["CₙH₂ₙ₊₂","CₙH₂ₙ","CₙH₂ₙ₋₂","CₙHₙ"],1,"Alkenes have one C=C double bond, so CₙH₂ₙ. Alkanes are CₙH₂ₙ₊₂."],
+["Organic chemistry","Which functional group do alcohols contain?",["–COOH","–OH","–CHO","–NH₂"],1,"The hydroxyl group –OH. –COOH is carboxylic acids and –CHO is aldehydes."],
+["Electrochemistry","During electrolysis, what happens at the cathode?",["Oxidation","Reduction","Neutralisation","Evaporation"],1,"Cations gain electrons at the cathode, which is reduction."],
+["Electrochemistry","What forms at the cathode in the electrolysis of molten NaCl?",["Cl₂","Na","H₂","O₂"],1,"Molten NaCl has no water, so Na⁺ is reduced to sodium metal. Chlorine forms at the anode."],
+["Reaction rates","How does a catalyst speed up a reaction?",["Raises activation energy","Lowers activation energy","Shifts equilibrium","Increases yield"],1,"It offers a path with lower activation energy and is not used up."],
+["Stoichiometry (SAT)","What mass of NaOH is needed to make 500 mL of 0.2 M solution? (Na = 23, O = 16, H = 1)",["2 g","4 g","8 g","20 g"],1,"Moles = 0.2 × 0.5 = 0.1 mol. Molar mass = 40 g/mol. Mass = 0.1 × 40 = 4 g."],
+["Equilibrium","What is Kc for N₂ + 3H₂ ⇌ 2NH₃?",["[NH₃] / ([N₂][H₂])","[NH₃]² / ([N₂][H₂]³)","[N₂][H₂]³ / [NH₃]²","[NH₃]² / ([N₂] + [H₂]³)"],1,"Products over reactants, each concentration raised to its coefficient."],
+["Acids and bases (advanced)","What is the pH of 0.1 M weak acid with Ka = 1 × 10⁻⁵?",["1","3","5","6"],1,"[H⁺] = √(Ka × C) = √(10⁻⁶) = 10⁻³ M, so pH = 3."],
+["Redox","What is the oxidation state of Cr in K₂Cr₂O₇?",["+3","+6","+7","+12"],1,"2(+1) + 2x + 7(−2) = 0, so 2x = 12 and x = +6."]];
+const R=(a,b)=>Array.from({length:b-a+1},(_,i)=>a+i);
+const SETS=[
+{id:"f",n:"WAEC and NECO starter",d:"15 questions with instant checking",lock:0,ix:R(0,14)},
+{id:"s",n:"SAT chemistry",d:"Quantitative problems with full solutions",lock:1,ix:[15]},
+{id:"u",n:"University level",d:"Equilibrium, weak acids and redox",lock:1,ix:[16,17,18]},
+{id:"m",n:"Timed mock exam",d:"All 19 questions in 15 minutes",lock:1,time:900,ix:R(0,18)}];
+
+// ---------- Saved data (browser only, wrapped for safety) ----------
+let S={prem:false,hist:[],top:{},user:null};
+try{S=Object.assign(S,JSON.parse(localStorage.getItem("ce")||"{}"))}catch(e){}
+const save=()=>{try{localStorage.setItem("ce",JSON.stringify(S))}catch(e){}};
+let cur=null,tm=null;
+const $=id=>document.getElementById(id);
+const fmt=s=>Math.floor(s/60)+":"+String(s%60).padStart(2,"0");
+
+// ---------- Payment placeholder ----------
+async function pay(){
+  const email=(S.user&&S.user.e)||prompt("Enter your email to subscribe:");
+  if(!email||!email.includes("@"))return;
+  try{
+    const r=await fetch("/api/start-payment",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email})});
+    const d=await r.json();
+    if(d.url)location.href=d.url;else alert(d.error||"Could not start payment.");
+  }catch(x){alert("Network error. Try again.")}
+}
+function cancel(){alert("To cancel, use the manage-subscription link in your Paystack receipt email.")}
+// On load: confirm a just-finished payment, then re-check access with the server
+async function boot(){
+  const ref=new URLSearchParams(location.search).get("reference");
+  try{
+    if(ref){const r=await fetch("/api/verify-payment?reference="+encodeURIComponent(ref));const d=await r.json();if(d.token){S.token=d.token;save()}history.replaceState(null,"",location.pathname+"#practice")}
+    if(S.token){const r=await fetch("/api/check-access",{method:"POST",body:JSON.stringify({token:S.token})});const d=await r.json();S.prem=!!d.plus}else S.prem=false;
+    save();
+  }catch(x){}
+  render();
+}
+
+// ---------- Quiz ----------
+function start(id){
+  const s=SETS.find(x=>x.id===id);
+  if(s.lock&&!S.prem){cur={wall:s};return render()}
+  const qs=s.ix.map(i=>Q[i]); if(s.time)qs.sort(()=>Math.random()-.5);
+  cur={s,qs,i:0,sc:0,n:0,pick:null,left:s.time};
+  if(s.time)tm=setInterval(()=>{cur.left--;if($("t"))$("t").textContent=fmt(Math.max(cur.left,0));if(cur.left<=0)finish()},1000);
+  render();
+}
+function pick(j){
+  if(cur.pick!=null)return;
+  const q=cur.qs[cur.i],ok=j===q[3];
+  cur.pick=j;cur.n++;if(ok)cur.sc++;
+  const t=S.top[q[0]]=S.top[q[0]]||[0,0];t[1]++;if(ok)t[0]++;
+  save();render();
+}
+function next(){cur.i++;cur.pick=null;cur.i>=cur.qs.length?finish():render()}
+function finish(){
+  clearInterval(tm);
+  S.hist.unshift({n:cur.s.n,sc:cur.sc,t:cur.n,d:new Date().toLocaleDateString()});
+  S.hist=S.hist.slice(0,20);save();cur.done=true;render();
+}
+function back(){clearInterval(tm);cur=null;render()}
+
+// ---------- Views ----------
+const V={
+home(){return `<section class="hero"><div>
+<h1>Pass chemistry. Then go further.</h1>
+<p>Free WAEC and NECO practice for every student. ₦500 a month adds SAT and university problems, timed mocks and full worked solutions.</p>
+<button class="btn" onclick="go('practice')">Start free practice</button><button class="btn alt" onclick="go('pricing')">See pricing</button></div>
+<div class="card" style="text-align:center"><svg viewBox="0 0 100 120" width="100%" aria-label="Beaker that turns pink as base is added"><path d="M20 15v85a8 8 0 0 0 8 8h44a8 8 0 0 0 8-8V15" fill="none" stroke="var(--ink)" stroke-width="3"/><rect id="liq" x="22" y="60" width="56" height="46" fill="#9ec5ff" opacity=".6"/><rect id="pk" x="22" y="60" width="56" height="46" fill="#e0287a" opacity="0"/><path d="M14 15h72" stroke="var(--ink)" stroke-width="3"/></svg>
+<label class="mut" style="font-size:.85rem" for="dr">Add NaOH to HCl with phenolphthalein</label><input id="dr" type="range" min="0" max="100" value="0"><b id="ph">pH 1.0</b></div></section>
+<div class="card"><h3>Built for three kinds of students</h3><p><b>WAEC and NECO candidates</b> get exam-style questions with instant answers.<br><b>SAT students</b> get quantitative problems.<br><b>University students</b> get equilibrium, redox and weak-acid calculations.</p></div>`},
+practice(){
+  if(!cur)return `<h2>Practice</h2>`+SETS.map(s=>`<div class="card"><h3>${s.n}${s.lock?`<span class="tag">${S.prem?"Plus":"Locked"}</span>`:`<span class="tag">Free</span>`}</h3><p class="mut">${s.d}</p><button class="btn" onclick="start('${s.id}')">${s.lock&&!S.prem?"Unlock":"Start"}</button></div>`).join("");
+  if(cur.wall)return `<div class="card"><h2>${cur.wall.n} is part of Plus</h2><p>Unlock SAT and university sets, timed mock exams and full worked solutions for ₦500 a month.</p><button class="btn" onclick="go('pricing')">See Plus</button><button class="btn alt" onclick="back()">Back to sets</button></div>`;
+  if(cur.done)return `<div class="card"><h2>${cur.sc} of ${cur.n} correct</h2><p class="mut">Saved to your progress.</p><button class="btn" onclick="back()">Back to sets</button><button class="btn alt" onclick="go('progress')">View progress</button></div>`;
+  const q=cur.qs[cur.i],p=cur.pick;
+  return `<div class="card"><p class="mut">${q[0]}: question ${cur.i+1} of ${cur.qs.length}${cur.s.time?` · time left <b id="t">${fmt(cur.left)}</b>`:""}</p><h3>${q[1]}</h3>`+
+  q[2].map((o,j)=>`<button class="opt ${p!=null?(j===q[3]?"ok":j===p?"no":""):""}" onclick="pick(${j})">${o}</button>`).join("")+
+  (p!=null?`<p><b>${p===q[3]?"Correct.":"Not quite."}</b> ${q[4]}</p><button class="btn" onclick="next()">${cur.i+1>=cur.qs.length?"Finish":"Next question"}</button>`:"")+`<button class="btn alt" onclick="back()">Leave</button></div>`},
+pricing(){return `<h2>Pricing</h2><div class="plans"><div class="card"><h3>Free</h3><div class="price">₦0</div><p>15 WAEC and NECO questions, instant answers, progress tracking.</p></div>
+<div class="card" style="border-color:var(--pink)"><h3>Plus</h3><div class="price">₦500<span class="mut" style="font-size:1rem"> per month</span></div><p>Everything in Free, plus SAT and university sets, timed mock exams and full worked solutions. Billed monthly.</p>
+${S.prem?`<p><b>You are on Plus.</b></p><button class="btn alt" onclick="cancel()">Manage plan</button>`:`<button class="btn" onclick="pay()">Upgrade for ₦500 a month</button>`}</div></div>`},
+progress(){
+  const e=Object.entries(S.top),tot=e.reduce((a,x)=>a+x[1][1],0),ok=e.reduce((a,x)=>a+x[1][0],0);
+  if(!tot)return `<div class="card"><h2>No scores yet</h2><p>Answer a few questions and your weak topics will show up here.</p><button class="btn" onclick="go('practice')">Start practice</button></div>`;
+  const w=e.map(([k,v])=>[k,Math.round(100*v[0]/v[1]),v[1]]).sort((a,b)=>a[1]-b[1]);
+  return `<h2>Progress</h2><div class="card"><h3>${Math.round(100*ok/tot)}% correct overall</h3><p class="mut">${tot} questions answered</p></div>
+<div class="card"><h3>Topics, weakest first</h3>${w.map(x=>`<p style="margin:.6em 0 .2em">${x[0]}: ${x[1]}% (${x[2]})</p><div class="bar"><i style="width:${x[1]}%"></i></div>`).join("")}</div>
+<div class="card"><h3>Recent sessions</h3>${S.hist.slice(0,8).map(h=>`<p>${h.d}: ${h.n}, ${h.sc}/${h.t}</p>`).join("")}</div>`},
+account(){return S.user?`<div class="card"><h2>Hello, ${S.user.n.replace(/[<>&]/g,"")}</h2><p class="mut">Saved on this device only.</p><button class="btn alt" onclick="S.user=null;save();render()">Sign out</button></div>`:
+`<div class="card"><h2>Create your account</h2><label for="nm">Name</label><input id="nm" type="text" autocomplete="name"><label for="em">Email</label><input id="em" type="email" autocomplete="email"><button class="btn" onclick="signup()">Create account</button><p class="mut">Accounts are saved on this device for now. Connect a real login service before launch.</p></div>`}
+};
+function signup(){const n=$("nm").value.trim(),e=$("em").value.trim();if(!n||!e.includes("@"))return alert("Enter your name and a valid email.");S.user={n,e};save();render()}
+
+// ---------- Router and beaker demo ----------
+const NAV=[["home","Home"],["practice","Practice"],["pricing","Pricing"],["progress","Progress"],["account","Account"]];
+function go(v){location.hash=v}
+function render(){
+  const v=V[location.hash.slice(1)]?location.hash.slice(1):"home";
+  $("nav").innerHTML=NAV.map(n=>`<a href="#${n[0]}" class="${n[0]===v?"on":""}">${n[1]}</a>`).join("");
+  $("app").innerHTML=V[v]();
+  if(v==="home"){const r=$("dr");r.oninput=()=>{const x=+r.value,
+    ph=x<45?1+x*0.06:x<55?3.7+(x-45)*0.7:10.7+(x-55)*0.05;
+    $("pk").setAttribute("opacity",Math.min(Math.max((x-48)/12,0),1)*0.75);
+    $("ph").textContent="pH "+ph.toFixed(1)}}
+}
+window.addEventListener("hashchange",()=>{clearInterval(tm);cur=null;render();window.scrollTo(0,0)});
+boot();
+</script>
+</body>
+</html>
